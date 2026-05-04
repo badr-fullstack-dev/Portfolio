@@ -5,11 +5,16 @@ import {
   type ContactApiResponse,
 } from "@/lib/contact-schema";
 import { contactInfo } from "@/lib/content";
+import { checkRateLimit, clientIdFromRequest } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
-function json(body: ContactApiResponse, status = 200) {
-  return Response.json(body, { status });
+function json(
+  body: ContactApiResponse,
+  status = 200,
+  extraHeaders?: HeadersInit,
+) {
+  return Response.json(body, { headers: extraHeaders, status });
 }
 
 function clean(value: string | undefined) {
@@ -17,6 +22,25 @@ function clean(value: string | undefined) {
 }
 
 export async function POST(request: Request) {
+  const clientId = clientIdFromRequest(request);
+  const limit = checkRateLimit(clientId);
+  if (!limit.allowed) {
+    return json(
+      {
+        code: "rate_limited",
+        message:
+          "Trop de tentatives. Réessayez plus tard ou écrivez directement à " +
+          contactInfo.email +
+          ". — Too many attempts. Try again later or email " +
+          contactInfo.email +
+          " directly.",
+        success: false,
+      },
+      429,
+      { "Retry-After": String(limit.retryAfterSeconds) },
+    );
+  }
+
   let payload: unknown;
 
   try {

@@ -20,6 +20,7 @@ export type ContactApiResponse = {
     | "validation_error"
     | "email_not_configured"
     | "send_failed"
-    | "invalid_json";
+    | "invalid_json"
+    | "rate_limited";
   fieldErrors?: Partial<Record<keyof ContactPayload, string[]>>;
 };
