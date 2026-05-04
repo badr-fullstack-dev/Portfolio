@@ -11,7 +11,7 @@ export const locales: Locale[] = ["fr", "en"];
 
 export const contactInfo: ContactInfo = {
   name: "Badreddine",
-  email: "elaouba@et.esiea.fr",
+  email: "contact@badreddine.dev",
   phone: "+33 678398091",
   linkedin: "https://www.linkedin.com/in/badreddine-el-aouba-952b84352/",
   github: "https://github.com/badr-fullstack-dev",
@@ -365,7 +365,7 @@ export const content: Record<Locale, SiteContent> = {
         "Le formulaire est relié à Resend en production. Si l'email serveur n'est pas encore configuré, les contacts directs restent affichés.",
       formTitle: "Brief rapide",
       fallback:
-        "Si le formulaire n'est pas encore configuré, écrivez directement à elaouba@et.esiea.fr.",
+        "Si le formulaire n'est pas encore configuré, écrivez directement à contact@badreddine.dev.",
     },
     form: {
       name: "Nom",
@@ -629,7 +629,7 @@ export const content: Record<Locale, SiteContent> = {
         "The form is wired to Resend in production. If server email is not configured yet, direct contact channels stay visible.",
       formTitle: "Quick brief",
       fallback:
-        "If the form is not configured yet, email elaouba@et.esiea.fr directly.",
+        "If the form is not configured yet, email contact@badreddine.dev directly.",
     },
     form: {
       name: "Name",

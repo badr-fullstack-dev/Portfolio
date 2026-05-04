@@ -92,7 +92,7 @@ export async function POST(request: Request) {
     const result = await resend.emails.send({
       from:
         process.env.RESEND_FROM_EMAIL ||
-        "Badreddine Portfolio <onboarding@resend.dev>",
+        "Badreddine Portfolio <noreply@badreddine.dev>",
       replyTo: data.email,
       subject,
       text,

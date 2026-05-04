@@ -33,8 +33,8 @@ Copy `.env.example` to `.env.local` and fill the production values when ready.
 ```text
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 RESEND_API_KEY=
-CONTACT_TO_EMAIL=elaouba@et.esiea.fr
-RESEND_FROM_EMAIL=Badreddine Portfolio <onboarding@resend.dev>
+CONTACT_TO_EMAIL=contact@badreddine.dev
+RESEND_FROM_EMAIL=Badreddine Portfolio <noreply@badreddine.dev>
 ```
 
 If `RESEND_API_KEY` is missing, the contact form returns a clear fallback message and the UI keeps the direct email visible.
