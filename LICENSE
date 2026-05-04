@@ -1,0 +1,28 @@
+Copyright (c) 2026 Badreddine El Aouba
+
+All rights reserved.
+
+This repository contains the source code for a personal freelance portfolio,
+including original copy, case studies, branding (logo mark, color system,
+typography choices), and contact information.
+
+The source is published on GitHub for transparency and as a public artifact
+of the author's work. It is NOT released as open source software.
+
+You may:
+
+  * Read and study the code for personal learning.
+  * Reference small, idiomatic implementation details (a hook, a utility,
+    a Tailwind pattern) in your own work without attribution.
+
+You may NOT, without prior written permission from the author:
+
+  * Reproduce, redistribute, deploy, or host this site or any substantial
+    portion of its content (including copy, case studies, layout, or
+    branding).
+  * Use the author's name, photo, contact details, or project descriptions
+    to represent yourself or another party.
+  * Sell, sublicense, or relicense the code or content.
+
+For permission requests, partnership inquiries, or freelance work, contact
+the author at contact@badreddine.dev.
