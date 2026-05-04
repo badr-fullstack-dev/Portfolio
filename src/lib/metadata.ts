@@ -20,6 +20,7 @@ export function pageMetadata(locale: Locale): Metadata {
     description: data.description,
     metadataBase: new URL(getSiteUrl()),
     openGraph: {
+      alternateLocale: locale === "fr" ? "en_US" : "fr_FR",
       description: data.ogDescription,
       locale: locale === "fr" ? "fr_FR" : "en_US",
       siteName: "Badreddine Portfolio",
