@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Badreddine Portfolio
 
-## Getting Started
+Futuristic bilingual freelance portfolio for Badreddine, focused on AI automations, business chatbots, full-stack web applications, and business websites for French SMBs.
 
-First, run the development server:
+## Stack
 
-```bash
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Zod validation
+- Resend contact email delivery
+- Vercel deployment target
+
+## Local Development
+
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Routes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` French-first portfolio
+- `/en` English version
+- `/api/contact` contact form endpoint
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local` and fill the production values when ready.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+RESEND_API_KEY=
+CONTACT_TO_EMAIL=elaouba@et.esiea.fr
+RESEND_FROM_EMAIL=Badreddine Portfolio <onboarding@resend.dev>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If `RESEND_API_KEY` is missing, the contact form returns a clear fallback message and the UI keeps the direct email visible.
 
-## Deploy on Vercel
+## Verification
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```powershell
+npm run lint
+npm run typecheck
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Manual checks before deployment:
+
+- `/` and `/en` render correctly.
+- Language switch moves between French and English.
+- Contact form shows validation errors for empty, invalid, and short fields.
+- Missing Resend config shows the direct email fallback.
+- Demo and GitHub links open in new tabs.
+- Mobile layout works at 375px width.
+- Desktop layout works at 1440px width.
+- No placeholder content, fake metrics, fake testimonials, pricing, analytics, or CV link.
+
+## Vercel Deployment
+
+1. Push the repository to GitHub.
+2. Import the project in Vercel.
+3. Add environment variables:
+   - `NEXT_PUBLIC_SITE_URL`
+   - `RESEND_API_KEY`
+   - `CONTACT_TO_EMAIL`
+   - `RESEND_FROM_EMAIL`
+4. Deploy.
+5. When a custom domain is purchased, set `NEXT_PUBLIC_SITE_URL` to the final `https://` domain and redeploy.
