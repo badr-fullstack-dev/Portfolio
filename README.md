@@ -3,8 +3,12 @@
 Bilingual (FR/EN) freelance portfolio for Badreddine — AI automations, business
 chatbots, full-stack web applications, and business websites for French SMBs.
 
-**Live:** https://badreddine.dev
+**Live:** https://www.badreddine.dev
 **Repo:** https://github.com/badr-fullstack-dev/Portfolio
+
+The apex `https://badreddine.dev` redirects to the canonical `https://www.badreddine.dev`.
+All SEO metadata (canonical, hreflang, OG, sitemap, JSON-LD) uses the canonical
+www origin via `NEXT_PUBLIC_SITE_URL`.
 
 ## Stack
 
@@ -53,7 +57,12 @@ Home page sections (in order, both locales):
 Copy `.env.example` to `.env.local` and fill in real values.
 
 ```text
+# Local development
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# Production (set in Vercel → Settings → Environment Variables)
+# NEXT_PUBLIC_SITE_URL=https://www.badreddine.dev
+
 RESEND_API_KEY=re_...
 CONTACT_TO_EMAIL=contact@badreddine.dev
 RESEND_FROM_EMAIL=Badreddine Portfolio <noreply@badreddine.dev>
@@ -91,8 +100,13 @@ Manual checks before deployment:
 
 ### Vercel
 - Project imported from GitHub `badr-fullstack-dev/Portfolio`.
-- Domain `badreddine.dev` connected at the apex (A → `216.198.79.1`).
+- Canonical production origin: **`https://www.badreddine.dev`** (primary domain).
+- Apex `badreddine.dev` connected (A → `216.198.79.1`) and redirects to the
+  www canonical.
 - `www.badreddine.dev` connected via CNAME → `*.vercel-dns-017.com`.
+- `NEXT_PUBLIC_SITE_URL=https://www.badreddine.dev` set on the Production
+  environment so canonical, hreflang, OG, sitemap, and JSON-LD all use the
+  www origin.
 - Environment variables set for Production, Preview, and Development.
 
 ### Email pipeline (Resend on OVH DNS)
