@@ -154,11 +154,11 @@ export const content: Record<Locale, SiteContent> = {
     hero: {
       eyebrow: "Freelance IA et full-stack basé à Paris",
       title:
-        "Je transforme les tâches répétitives des PME en outils web fiables.",
+        "J'aide les PME à automatiser leurs tâches répétitives avec des outils web fiables.",
       subtitle:
-        "Automations IA, chatbots métier, applications React/Node et sites e-commerce livrés de l'idée au déploiement.",
-      primaryCta: "Parler du projet",
-      secondaryCta: "Voir les preuves",
+        "Automations IA, chatbots et applications full-stack qui réduisent le travail manuel et les délais — sans démo qui s'effondre dès le premier vrai cas.",
+      primaryCta: "Discuter de votre besoin",
+      secondaryCta: "Voir les projets",
       availability: "Disponible pour missions freelance et remote",
       avatarAlt: "Photo de profil GitHub de Badreddine",
       signalTitle: "Signal projet",
@@ -185,33 +185,33 @@ export const content: Record<Locale, SiteContent> = {
           icon: "bot",
           title: "Automations IA et chatbots",
           description:
-            "Connexion de LLMs à des tâches réelles: support, qualification de leads, génération de contenu, assistants internes.",
+            "Connecter un LLM à un vrai workflow: tri d'emails, qualification de leads, support 24/7, génération de documents répétitifs.",
           bullets: [
-            "Prompt engineering orienté fiabilité",
-            "Flux avec validation humaine quand nécessaire",
-            "Interfaces simples pour équipes non techniques",
+            "Cas d'usage chiffré avant le code, pour éviter de payer une démo",
+            "Validation humaine quand l'erreur coûte cher",
+            "Interface simple pour vos équipes terrain, pas pour des devs",
           ],
         },
         {
           icon: "code",
           title: "Applications web sur mesure",
           description:
-            "Applications full-stack avec React, Node.js, APIs, bases de données et déploiement propre.",
+            "Des outils internes ou clients quand un SaaS générique ne couvre pas votre besoin métier.",
           bullets: [
-            "Tableaux de bord et outils internes",
-            "APIs REST et intégrations métier",
-            "Architecture claire pour évoluer après v1",
+            "Tableaux de bord, portails clients, outils de gestion",
+            "API REST et intégrations avec vos outils existants",
+            "Architecture pensée pour évoluer après la v1, sans refonte",
           ],
         },
         {
           icon: "store",
           title: "Sites business et e-commerce",
           description:
-            "Sites vitrines, pages de conversion et expériences e-commerce rapides, responsive et faciles à présenter.",
+            "Sites vitrines et e-commerce qui convertissent un visiteur en lead ou en commande, sans bloat.",
           bullets: [
-            "Design moderne et orienté confiance",
+            "Pages claires, rapides, responsive sur mobile dès la v1",
             "Parcours contact ou achat sans friction",
-            "SEO technique et performance de base",
+            "Bases SEO techniques et performance prêtes le jour du lancement",
           ],
         },
       ],
@@ -356,7 +356,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Contact",
       title: "Décrivons le workflow à automatiser.",
       intro:
-        "Envoyez le contexte, le délai et ce qui vous prend trop de temps aujourd'hui. Vous pouvez aussi contacter Badreddine directement.",
+        "Envoyez en quelques lignes votre activité, le besoin concret, le délai et le budget indicatif. Réponse sous 48 h ouvrées par email.",
       directTitle: "Canaux directs",
       directIntro:
         "Le formulaire est relié à Resend en production. Si l'email serveur n'est pas encore configuré, les contacts directs restent affichés.",
@@ -415,11 +415,11 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "AI and full-stack freelancer based in Paris",
-      title: "I turn repetitive SMB workflows into reliable web tools.",
+      title: "I help SMBs turn repetitive workflows into reliable web tools.",
       subtitle:
-        "AI automations, business chatbots, React/Node apps and e-commerce experiences shipped from idea to deployment.",
-      primaryCta: "Discuss a project",
-      secondaryCta: "See proof",
+        "AI automations, chatbots and full-stack apps that cut manual work and delivery time — not just a demo that breaks on the first real case.",
+      primaryCta: "Discuss your need",
+      secondaryCta: "See the projects",
       availability: "Available for freelance and remote work",
       avatarAlt: "Badreddine GitHub profile photo",
       signalTitle: "Project signal",
@@ -446,33 +446,33 @@ export const content: Record<Locale, SiteContent> = {
           icon: "bot",
           title: "AI automations and chatbots",
           description:
-            "LLMs connected to real tasks: support, lead handling, content generation and internal assistants.",
+            "Connect an LLM to a real workflow: email triage, lead qualification, 24/7 support, repeatable document generation.",
           bullets: [
-            "Reliability-focused prompt engineering",
-            "Human validation when the workflow needs it",
-            "Simple interfaces for non-technical teams",
+            "Quantified use case before any code, so you don't pay for a demo",
+            "Human validation when a mistake is expensive",
+            "Simple interface for your operations team, not for developers",
           ],
         },
         {
           icon: "code",
           title: "Custom web applications",
           description:
-            "Full-stack applications with React, Node.js, APIs, databases and clean deployment.",
+            "Internal or customer-facing tools when a generic SaaS does not fit your business need.",
           bullets: [
-            "Dashboards and internal tools",
-            "REST APIs and business integrations",
-            "A clear architecture that can grow after v1",
+            "Dashboards, customer portals and internal management tools",
+            "REST APIs and integrations with the tools you already use",
+            "Architecture designed to grow after v1, without a rewrite",
           ],
         },
         {
           icon: "store",
           title: "Business sites and e-commerce",
           description:
-            "Fast, responsive business websites, conversion pages and e-commerce experiences.",
+            "Showcase and e-commerce sites that turn a visitor into a lead or an order, without bloat.",
           bullets: [
-            "Modern design focused on trust",
-            "Low-friction contact or purchase paths",
-            "Baseline technical SEO and performance",
+            "Clear, fast, mobile-first pages from v1",
+            "Low-friction contact or purchase flow",
+            "Technical SEO and baseline performance ready on launch day",
           ],
         },
       ],
@@ -617,7 +617,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Contact",
       title: "Let's describe the workflow to automate.",
       intro:
-        "Send the context, timeline and what takes too much time today. You can also contact Badreddine directly.",
+        "In a few lines, share what your business does, the concrete need, the timeline, and an indicative budget. Reply within 2 working days by email.",
       directTitle: "Direct channels",
       directIntro:
         "The form is wired to Resend in production. If server email is not configured yet, direct contact channels stay visible.",
