@@ -34,6 +34,20 @@ Routes:
 - `/icon`, `/apple-icon`
 - Branded `not-found.tsx` (404) and `error.tsx` (runtime boundary)
 
+Home page sections (in order, both locales):
+
+1. Hero — eyebrow, title, subtitle, CTAs, availability, project-signal list.
+2. Proof — five short claims grounded in countable facts (e.g. "5 shipped
+   public projects", "Français · Anglais · Arabe").
+3. Services — three offerings (AI automations & chatbots, custom web apps,
+   business sites & e-commerce).
+4. Work — five real case studies in `src/lib/content.ts`, each linking to a
+   public GitHub repo and/or a live site.
+5. Process — three differentiated steps (audit & scope → prototype → build,
+   hardening & deployment).
+6. About — bilingual profile + working stack chips.
+7. Contact — direct channels + Resend-wired brief form.
+
 ## Environment
 
 Copy `.env.example` to `.env.local` and fill in real values.
@@ -70,6 +84,8 @@ Manual checks before deployment:
 - Desktop layout works at 1440px width.
 - No placeholder content, fake metrics, fake testimonials, pricing, analytics,
   or CV link.
+- Proof and process copy reflects only countable, public facts (no testimonials
+  ship until a real attributable quote with permission is available).
 
 ## Production setup (already in place)
 
