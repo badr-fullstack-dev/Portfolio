@@ -169,11 +169,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     proof: [
-      "Automations IA",
-      "Chatbots métier",
-      "Apps React/Node",
+      "5 projets publics livrés",
+      "Apps full-stack React/Node",
+      "Automations IA et chatbots",
       "Sites et e-commerce",
-      "Français, anglais, arabe",
+      "Français · Anglais · Arabe",
     ],
     services: {
       eyebrow: "Ce que je livre",
@@ -336,12 +336,9 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "Le workflow est pensé pour les petites équipes: décider vite, prouver vite, puis sécuriser la mise en production.",
       steps: [
-        "Audit du besoin, des outils existants et des tâches répétitives",
-        "Cadrage du périmètre v1 et des limites à ne pas dépasser",
-        "Prototype court pour valider la valeur réelle",
-        "Développement full-stack avec validations régulières",
-        "Tests, sécurité des données et gestion des erreurs",
-        "Déploiement, documentation et support de lancement",
+        "Audit et cadrage du périmètre v1",
+        "Prototype rapide validé avec vous",
+        "Build, sécurité et déploiement",
       ],
     },
     about: {
@@ -433,11 +430,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     proof: [
-      "AI automations",
-      "Business chatbots",
-      "React/Node apps",
+      "5 shipped public projects",
+      "Full-stack React/Node apps",
+      "AI automations and chatbots",
       "Sites and e-commerce",
-      "French, English, Arabic",
+      "French · English · Arabic",
     ],
     services: {
       eyebrow: "What I deliver",
@@ -600,12 +597,9 @@ export const content: Record<Locale, SiteContent> = {
       intro:
         "The workflow is designed for small teams: decide quickly, prove value quickly, then secure production.",
       steps: [
-        "Audit the need, current tools and repetitive tasks",
-        "Define the v1 scope and what must stay out of scope",
-        "Build a short prototype to validate real value",
-        "Develop the full-stack product with regular reviews",
-        "Test, protect data and handle failure states",
-        "Deploy, document and support the launch",
+        "Audit and scope the v1",
+        "Fast prototype validated with you",
+        "Build, hardening and deployment",
       ],
     },
     about: {
