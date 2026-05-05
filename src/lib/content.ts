@@ -1,6 +1,7 @@
 import type {
   CaseStudy,
   ContactInfo,
+  FaqItem,
   Locale,
   SeoConfig,
   ServiceItem,
@@ -48,6 +49,7 @@ type SiteContent = {
     work: string;
     process: string;
     about: string;
+    faq: string;
     contact: string;
   };
   hero: {
@@ -88,6 +90,12 @@ type SiteContent = {
     body: string[];
     techTitle: string;
     tech: TechItem[];
+  };
+  faq: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: FaqItem[];
   };
   contact: {
     eyebrow: string;
@@ -149,6 +157,7 @@ export const content: Record<Locale, SiteContent> = {
       work: "Projets",
       process: "Méthode",
       about: "Profil",
+      faq: "FAQ",
       contact: "Contact",
     },
     hero: {
@@ -352,6 +361,52 @@ export const content: Record<Locale, SiteContent> = {
       techTitle: "Stack utilisée",
       tech: sharedTech,
     },
+    faq: {
+      eyebrow: "Questions fréquentes",
+      title: "Ce que les PME demandent avant de commencer.",
+      intro:
+        "Réponses courtes et honnêtes aux points qui bloquent souvent une décision freelance.",
+      items: [
+        {
+          question: "Comment démarre une première mission ?",
+          answer:
+            "Premier échange par email ou téléphone pour cadrer le besoin (30 à 45 minutes). Si le projet a du sens, je propose une v1 chiffrée avec périmètre, livrables et délais clairs avant tout développement.",
+        },
+        {
+          question: "Pouvez-vous travailler sur un site ou un code existant ?",
+          answer:
+            "Oui. La majorité des missions PME démarre sur une base existante: refonte partielle, intégration d'IA dans un workflow déjà en place, ajout d'API ou correction d'un projet livré par un autre prestataire.",
+        },
+        {
+          question:
+            "Comment sont gérées les erreurs et les actions risquées des automations IA ?",
+          answer:
+            "Aucune action sensible (envoi client, paiement, modification de données) n'est exécutée sans validation humaine ou journal d'audit. Les workflows IA sont testés sur des cas réels avant mise en production, pas sur une démo idéale.",
+        },
+        {
+          question:
+            "À qui appartiennent le code, les comptes et les données après livraison ?",
+          answer:
+            "À vous. Le code est livré dans vos dépôts, les comptes (hébergement, base de données, API tierces) sont créés à votre nom, et l'accès vous est transféré entièrement à la fin de la mission.",
+        },
+        {
+          question:
+            "Peut-on commencer petit, avec un prototype, avant de s'engager ?",
+          answer:
+            "Oui, c'est même recommandé. Un prototype court (1 à 2 semaines) permet de valider la valeur réelle d'un workflow IA ou d'une fonctionnalité avant d'investir dans une v1 complète.",
+        },
+        {
+          question: "Que se passe-t-il après le lancement ?",
+          answer:
+            "Période de support incluse pour stabiliser la mise en production, puis option de maintenance évolutive (corrections, ajouts ciblés, suivi). Vous n'êtes pas obligé de continuer avec moi: tout est documenté pour qu'une autre équipe puisse reprendre.",
+        },
+        {
+          question: "Dans quelles langues peut-on travailler ?",
+          answer:
+            "Français, anglais et arabe à l'oral comme à l'écrit. Les livrables techniques (documentation, README, commits) sont en anglais par défaut, sauf demande contraire.",
+        },
+      ],
+    },
     contact: {
       eyebrow: "Contact",
       title: "Décrivons le workflow à automatiser.",
@@ -411,6 +466,7 @@ export const content: Record<Locale, SiteContent> = {
       work: "Work",
       process: "Process",
       about: "Profile",
+      faq: "FAQ",
       contact: "Contact",
     },
     hero: {
@@ -612,6 +668,50 @@ export const content: Record<Locale, SiteContent> = {
       ],
       techTitle: "Working stack",
       tech: sharedTech,
+    },
+    faq: {
+      eyebrow: "Frequently asked",
+      title: "What SMBs ask before getting started.",
+      intro:
+        "Short, honest answers to the points that usually block a freelance decision.",
+      items: [
+        {
+          question: "How does a first project start?",
+          answer:
+            "First conversation by email or phone to scope the need (30 to 45 minutes). If the project makes sense, I propose a costed v1 with clear scope, deliverables, and timeline before any development begins.",
+        },
+        {
+          question: "Can you work on an existing website or codebase?",
+          answer:
+            "Yes. Most SMB engagements start from an existing base: partial redesign, AI integrated into a workflow that already runs, added APIs, or fixing a project shipped by a previous provider.",
+        },
+        {
+          question: "How are AI mistakes and risky automations handled?",
+          answer:
+            "No sensitive action (customer-facing email, payment, data modification) runs without human validation or an audit log. AI workflows are tested on real cases before going live, not on an ideal demo.",
+        },
+        {
+          question:
+            "Who owns the code, accounts, and data after delivery?",
+          answer:
+            "You do. Code ships to your repositories, accounts (hosting, database, third-party APIs) are created in your name, and access is fully transferred at the end of the engagement.",
+        },
+        {
+          question: "Can the project start small with a prototype?",
+          answer:
+            "Yes, and it's recommended. A short prototype (1 to 2 weeks) validates the real value of an AI workflow or feature before investing in a full v1.",
+        },
+        {
+          question: "What happens after launch?",
+          answer:
+            "Included support window to stabilize production, plus an optional evolution and maintenance contract (fixes, targeted additions, monitoring). You are not locked in: everything is documented so another team could take over.",
+        },
+        {
+          question: "Which languages can we work in?",
+          answer:
+            "French, English, and Arabic, spoken and written. Technical deliverables (documentation, README, commits) default to English unless requested otherwise.",
+        },
+      ],
     },
     contact: {
       eyebrow: "Contact",

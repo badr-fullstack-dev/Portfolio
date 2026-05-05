@@ -50,7 +50,11 @@ Home page sections (in order, both locales):
 5. Process — three differentiated steps (audit & scope → prototype → build,
    hardening & deployment).
 6. About — bilingual profile + working stack chips.
-7. Contact — direct channels + Resend-wired brief form.
+7. FAQ — seven trust questions for SMB buyers (scoping, working on existing
+   code, AI risk handling, ownership of code/accounts/data, prototype-first,
+   post-launch support, working languages). Rendered with native
+   `<details>/<summary>` for keyboard-accessible disclosure.
+8. Contact — direct channels + Resend-wired brief form.
 
 ## Environment
 

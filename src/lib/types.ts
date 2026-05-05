@@ -31,6 +31,11 @@ export type CaseStudy = {
   links: ProjectLink[];
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type TechItem = {
   label: string;
   group: "frontend" | "backend" | "ai" | "tools";

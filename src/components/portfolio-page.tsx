@@ -2,6 +2,7 @@ import {
   ArrowUpRight,
   Bot,
   Check,
+  ChevronDown,
   Code2,
   GitBranch,
   Globe2,
@@ -335,6 +336,32 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
               ))}
             </div>
           </div>
+        </Section>
+
+        <Section
+          eyebrow={page.faq.eyebrow}
+          id="faq"
+          intro={page.faq.intro}
+          title={page.faq.title}
+        >
+          <ul className="grid gap-3" role="list">
+            {page.faq.items.map((item) => (
+              <li key={item.question}>
+                <details className="group rounded-[8px] border border-white/12 bg-white/[0.045] open:border-cyan-300/30 open:bg-white/[0.07]">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-[8px] p-5 text-left text-base font-semibold text-white transition hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 [&::-webkit-details-marker]:hidden">
+                    <span>{item.question}</span>
+                    <ChevronDown
+                      aria-hidden
+                      className="size-5 shrink-0 text-slate-400 transition group-open:rotate-180 motion-reduce:transition-none"
+                    />
+                  </summary>
+                  <p className="px-5 pb-5 text-sm leading-7 text-slate-300">
+                    {item.answer}
+                  </p>
+                </details>
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section

@@ -16,6 +16,7 @@ type HeaderContent = {
     work: string;
     process: string;
     about: string;
+    faq: string;
     contact: string;
   };
 };
@@ -31,6 +32,7 @@ export function SiteHeader({ content }: SiteHeaderProps) {
     { label: content.nav.work, href: "#work" },
     { label: content.nav.process, href: "#process" },
     { label: content.nav.about, href: "#about" },
+    { label: content.nav.faq, href: "#faq" },
     { label: content.nav.contact, href: "#contact" },
   ];
 
