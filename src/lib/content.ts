@@ -228,12 +228,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Jarvis Desktop AI Assistant",
           category: "Projet personnel IA",
           summary:
-            "Assistant desktop Windows-first avec autonomie gardée, HUD futuriste, voix, mémoire, audit log et orchestrateur Python.",
+            "Assistant desktop autonome pour Windows, conçu pour exécuter des actions sur la machine sans laisser l'utilisateur perdre la main.",
           stack: ["Python", "React", "Tauri", "Policy engine"],
           bullets: [
-            "Actions supervisées avec niveaux de risque et approbations",
-            "Bridge local entre interface et orchestrateur",
-            "Tests du runtime, de la voix, de la mémoire et de la fiabilité",
+            "Construit: HUD futuriste, voix, mémoire, audit log et orchestrateur Python avec policy engine.",
+            "Surface technique: front Tauri/React, runtime Python, bridge local, niveaux de risque et approbations.",
+            "Pourquoi c'est pertinent: prouve la maîtrise d'un produit IA complet, pas juste d'un wrapper de chat.",
           ],
           links: [
             {
@@ -246,12 +246,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "UMOD",
           category: "Client e-commerce français",
           summary:
-            "Travail client autour d'une page d'accueil, d'un calculateur métier et d'un chatbot pour une activité e-commerce.",
+            "Activité e-commerce française qui avait besoin d'une page d'accueil refaite, d'un calculateur métier et d'un chatbot de support.",
           stack: ["JavaScript", "Node.js", "Chatbot", "Landing page"],
           bullets: [
-            "Calculateur d'aides avec frontend et backend publics",
-            "Chatbot avec interface et API séparées",
-            "Approche de production pour un besoin métier concret",
+            "Construit: landing, calculateur d'aides (frontend + backend) et chatbot (UI + API) en dépôts publics.",
+            "Surface technique: JavaScript et Node.js, déploiement public, présence sur le site umod.fr.",
+            "Pourquoi c'est pertinent: une seule mission qui couvre front, back et IA, livrée en production.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
@@ -269,12 +269,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Cogelas Website",
           category: "Site client livré",
           summary:
-            "Site business public avec déploiement Vercel, pensé pour présenter une activité de manière claire et moderne.",
+            "Site vitrine déployé pour Cogelas, conçu pour présenter l'activité de manière claire, moderne et rapide à mettre en ligne.",
           stack: ["HTML", "CSS", "Vercel"],
           bullets: [
-            "Site public disponible en ligne",
-            "Projet récent maintenu sur GitHub",
-            "Exemple de livraison rapide pour une entreprise",
+            "Construit: pages publiques structurées, mise en page responsive, déploiement Vercel.",
+            "Surface technique: HTML et CSS, hébergement Vercel, démo publique accessible en ligne.",
+            "Pourquoi c'est pertinent: prouve la capacité à livrer rapidement un site business présentable.",
           ],
           links: [
             { label: "Demo", href: "https://cogelas-website.vercel.app" },
@@ -288,12 +288,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Haltea Website",
           category: "Site client",
           summary:
-            "Site vitrine client publié dans le portfolio GitHub, utile comme preuve de travail web orienté business.",
+            "Site vitrine pour Haltea, publié dans le portfolio GitHub comme preuve de travail web orienté présentation business.",
           stack: ["HTML", "CSS"],
           bullets: [
-            "Projet front-end simple et focalisé",
-            "Structure adaptée à une présence web professionnelle",
-            "Aucune fausse métrique ajoutée au case study",
+            "Construit: structure de pages simple, focalisée sur la lisibilité et la présentation de l'activité.",
+            "Surface technique: HTML et CSS, sans framework, code accessible publiquement.",
+            "Pourquoi c'est pertinent: cas d'usage 'site simple, livré, sans bloat' pour les très petites entreprises qui veulent une présence claire.",
           ],
           links: [
             {
@@ -306,12 +306,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "E-commerce Platform",
           category: "Projet full-stack personnel",
           summary:
-            "Plateforme e-commerce avec frontend et backend séparés pour montrer le travail sur plusieurs couches produit.",
+            "Plateforme e-commerce construite avec frontend et backend séparés pour démontrer un travail produit sur plusieurs couches: catalogue, panier, checkout.",
           stack: ["React", "Node.js", "API", "Vercel"],
           bullets: [
-            "Catalogue, panier et parcours checkout côté produit",
-            "Frontend et backend organisés dans deux dépôts",
-            "Démo frontend publique disponible",
+            "Construit: catalogue, panier et parcours checkout côté frontend; API et logique métier côté backend.",
+            "Surface technique: React et Node.js, deux dépôts distincts, démo frontend déployée sur Vercel.",
+            "Pourquoi c'est pertinent: référence concrète pour un projet e-commerce avec une séparation propre front et back.",
           ],
           links: [
             {
@@ -489,12 +489,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Jarvis Desktop AI Assistant",
           category: "Personal AI project",
           summary:
-            "Windows-first desktop assistant with guarded autonomy, futuristic HUD, voice, memory, audit log and a Python orchestrator.",
+            "Autonomous Windows desktop assistant designed to take real actions on the machine without losing user oversight.",
           stack: ["Python", "React", "Tauri", "Policy engine"],
           bullets: [
-            "Supervised actions with risk tiers and approvals",
-            "Local bridge between the interface and orchestrator",
-            "Runtime, voice, memory and reliability tests",
+            "Built: futuristic HUD, voice, memory, audit log, and a Python orchestrator with a policy engine.",
+            "Tech surface: Tauri/React front-end, Python runtime, local bridge, risk tiers and approvals.",
+            "Why it's relevant: proves end-to-end AI product delivery, not just a chat wrapper.",
           ],
           links: [
             {
@@ -507,12 +507,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "UMOD",
           category: "French e-commerce client",
           summary:
-            "Client work around a landing page, business calculator and chatbot for an e-commerce activity.",
+            "French e-commerce that needed a rebuilt landing page, a business calculator, and a support chatbot.",
           stack: ["JavaScript", "Node.js", "Chatbot", "Landing page"],
           bullets: [
-            "Calculator with public frontend and backend repos",
-            "Chatbot with separate UI and API",
-            "Production-minded approach for a concrete business need",
+            "Built: landing page, public-aid calculator (frontend + backend), and chatbot (UI + API) in public repos.",
+            "Tech surface: JavaScript and Node.js, public deployment, present on the umod.fr site.",
+            "Why it's relevant: a single engagement covering frontend, backend, and AI, shipped to production.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
@@ -530,12 +530,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Cogelas Website",
           category: "Delivered client website",
           summary:
-            "Public business website deployed on Vercel, designed to present a company clearly and professionally.",
+            "Showcase site shipped for Cogelas, designed to present the business clearly, modernly, and on a fast launch path.",
           stack: ["HTML", "CSS", "Vercel"],
           bullets: [
-            "Public site available online",
-            "Recent project maintained on GitHub",
-            "Example of fast delivery for a business",
+            "Built: structured public pages, responsive layout, Vercel deployment.",
+            "Tech surface: HTML and CSS, Vercel hosting, demo publicly accessible online.",
+            "Why it's relevant: shows the ability to ship a presentable business site quickly.",
           ],
           links: [
             { label: "Demo", href: "https://cogelas-website.vercel.app" },
@@ -549,12 +549,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "Haltea Website",
           category: "Client website",
           summary:
-            "Client showcase website published in the GitHub portfolio, useful as proof of business-focused web work.",
+            "Showcase site for Haltea, published in the GitHub portfolio as proof of business-focused web work.",
           stack: ["HTML", "CSS"],
           bullets: [
-            "Simple focused front-end project",
-            "Structure adapted to a professional web presence",
-            "No fake metrics added to the case study",
+            "Built: simple page structure focused on readability and presenting the business.",
+            "Tech surface: plain HTML and CSS, no framework, code publicly accessible.",
+            "Why it's relevant: 'simple, shipped, no bloat' use case for very small businesses that need a clear web presence.",
           ],
           links: [
             {
@@ -567,12 +567,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "E-commerce Platform",
           category: "Personal full-stack project",
           summary:
-            "E-commerce platform with separated frontend and backend repos to show work across product layers.",
+            "E-commerce platform built with separated frontend and backend to demonstrate product work across layers: catalog, cart, checkout.",
           stack: ["React", "Node.js", "API", "Vercel"],
           bullets: [
-            "Catalog, cart and checkout product flow",
-            "Frontend and backend organized in two repos",
-            "Public frontend demo available",
+            "Built: catalog, cart and checkout flow on the frontend; API and business logic on the backend.",
+            "Tech surface: React and Node.js, two separate repos, frontend demo deployed on Vercel.",
+            "Why it's relevant: concrete reference for an e-commerce project with a clean front/back split.",
           ],
           links: [
             {
