@@ -111,6 +111,7 @@ type SiteContent = {
     email: string;
     company: string;
     budget: string;
+    deadline: string;
     projectType: string;
     message: string;
     submit: string;
@@ -118,6 +119,20 @@ type SiteContent = {
     success: string;
     error: string;
     privacy: string;
+    idleHint: string;
+    helpers: {
+      email: string;
+      company: string;
+      budget: string;
+      deadline: string;
+      message: string;
+    };
+    placeholders: {
+      name: string;
+      email: string;
+      company: string;
+      deadline: string;
+    };
     budgetOptions: string[];
     projectOptions: string[];
   };
@@ -424,16 +439,32 @@ export const content: Record<Locale, SiteContent> = {
       email: "Email",
       company: "Entreprise",
       budget: "Budget indicatif",
+      deadline: "Délai souhaité",
       projectType: "Type de projet",
       message: "Message",
       submit: "Envoyer le brief",
       sending: "Envoi...",
       success:
-        "Merci, votre message est prêt côté site. Badreddine vous répondra directement par email.",
+        "Brief reçu. Réponse par email sous 48 h ouvrées — pensez à vérifier vos spams si rien n'arrive.",
       error:
         "Le message n'a pas pu être envoyé. Utilisez l'email direct ci-dessous.",
       privacy:
-        "Aucun tracking invasif en v1. Les données du formulaire servent uniquement à répondre à votre demande.",
+        "Pas de tracking, pas de revente. Les données servent uniquement à répondre à votre demande.",
+      idleHint: "Réponse sous 48 h ouvrées par email.",
+      helpers: {
+        email: "Adresse utilisée pour la réponse.",
+        company: "Optionnel — utile pour comprendre votre activité.",
+        budget: "Optionnel. Une fourchette suffit.",
+        deadline: "Ex: ASAP, dans 2 semaines, fin du mois.",
+        message:
+          "À inclure: votre activité en une ligne, le besoin concret, ce que vous avez déjà (site, outils, code), et tout autre contexte utile.",
+      },
+      placeholders: {
+        name: "Marie Dupont",
+        email: "marie@entreprise.com",
+        company: "Acme SARL",
+        deadline: "ASAP / 2 semaines / fin du mois",
+      },
       budgetOptions: [
         "A préciser",
         "Moins de 1 000 EUR",
@@ -730,16 +761,32 @@ export const content: Record<Locale, SiteContent> = {
       email: "Email",
       company: "Company",
       budget: "Indicative budget",
+      deadline: "Desired timeline",
       projectType: "Project type",
       message: "Message",
       submit: "Send the brief",
       sending: "Sending...",
       success:
-        "Thank you, your message is ready on the site side. Badreddine will reply by email.",
+        "Brief received. You will get an email reply within 2 working days — please check your spam folder if nothing arrives.",
       error:
         "The message could not be sent. Please use the direct email below.",
       privacy:
-        "No invasive tracking in v1. Form data is only used to answer your request.",
+        "No tracking, no resale. Form data is used only to answer your request.",
+      idleHint: "Reply within 2 working days by email.",
+      helpers: {
+        email: "Address used for the reply.",
+        company: "Optional — helps me understand your activity.",
+        budget: "Optional. A range is enough.",
+        deadline: "e.g. ASAP, in 2 weeks, end of month.",
+        message:
+          "Include: what your business does in one line, the concrete need, what you already have (site, tools, code), and any other useful context.",
+      },
+      placeholders: {
+        name: "Marie Dupont",
+        email: "marie@company.com",
+        company: "Acme Ltd",
+        deadline: "ASAP / 2 weeks / end of month",
+      },
       budgetOptions: [
         "To be discussed",
         "Less than EUR 1,000",

@@ -14,6 +14,7 @@ type ContactFormProps = {
     email: string;
     company: string;
     budget: string;
+    deadline: string;
     projectType: string;
     message: string;
     submit: string;
@@ -21,6 +22,20 @@ type ContactFormProps = {
     success: string;
     error: string;
     privacy: string;
+    idleHint: string;
+    helpers: {
+      email: string;
+      company: string;
+      budget: string;
+      deadline: string;
+      message: string;
+    };
+    placeholders: {
+      name: string;
+      email: string;
+      company: string;
+      deadline: string;
+    };
     budgetOptions: string[];
     projectOptions: string[];
   };
@@ -42,6 +57,7 @@ function fieldError(
     {
       en: {
         company: "Keep the company name under 120 characters.",
+        deadline: "Keep the timeline under 80 characters.",
         email: "Enter a valid email address.",
         message: "Write a message between 20 and 2000 characters.",
         name: "Enter a name between 2 and 80 characters.",
@@ -49,6 +65,7 @@ function fieldError(
       },
       fr: {
         company: "Limitez le nom de l'entreprise à 120 caractères.",
+        deadline: "Limitez le délai à 80 caractères.",
         email: "Indiquez une adresse email valide.",
         message: "Rédigez un message entre 20 et 2000 caractères.",
         name: "Indiquez un nom entre 2 et 80 caractères.",
@@ -57,6 +74,11 @@ function fieldError(
     };
 
   return messages[locale][field] || fieldErrors[field]?.[0];
+}
+
+function describedBy(...ids: (string | false | undefined)[]) {
+  const list = ids.filter(Boolean).join(" ");
+  return list || undefined;
 }
 
 export function ContactForm({ locale, labels, contact }: ContactFormProps) {
@@ -115,8 +137,24 @@ export function ContactForm({ locale, labels, contact }: ContactFormProps) {
   }
 
   const baseInput =
-    "min-h-12 w-full rounded-[8px] border border-white/12 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70 focus:ring-2 focus:ring-cyan-300/20";
+    "min-h-12 w-full rounded-[8px] border border-white/12 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-400 focus:border-cyan-300/70 focus:ring-2 focus:ring-cyan-300/20";
   const errorClass = "border-rose-300/70 focus:border-rose-300";
+  const helperClass = "mt-2 text-xs leading-5 text-slate-400";
+
+  const nameId = `${formId}-name`;
+  const emailId = `${formId}-email`;
+  const companyId = `${formId}-company`;
+  const budgetId = `${formId}-budget`;
+  const deadlineId = `${formId}-deadline`;
+  const projectTypeId = `${formId}-projectType`;
+  const messageId = `${formId}-message`;
+
+  const nameErr = fieldError(fieldErrors, "name", locale);
+  const emailErr = fieldError(fieldErrors, "email", locale);
+  const companyErr = fieldError(fieldErrors, "company", locale);
+  const deadlineErr = fieldError(fieldErrors, "deadline", locale);
+  const projectTypeErr = fieldError(fieldErrors, "projectType", locale);
+  const messageErr = fieldError(fieldErrors, "message", locale);
 
   return (
     <form
@@ -140,46 +178,52 @@ export function ContactForm({ locale, labels, contact }: ContactFormProps) {
         <div>
           <label
             className="mb-2 block text-sm font-medium text-slate-200"
-            htmlFor={`${formId}-name`}
+            htmlFor={nameId}
           >
             {labels.name}
           </label>
           <input
-            aria-invalid={Boolean(fieldError(fieldErrors, "name", locale))}
-            className={cn(
-              baseInput,
-              fieldError(fieldErrors, "name", locale) && errorClass,
-            )}
-            id={`${formId}-name`}
+            aria-describedby={describedBy(nameErr && `${nameId}-err`)}
+            aria-invalid={Boolean(nameErr)}
+            autoComplete="name"
+            className={cn(baseInput, nameErr && errorClass)}
+            id={nameId}
             maxLength={80}
             minLength={2}
             name="name"
+            placeholder={labels.placeholders.name}
             required
             type="text"
           />
-          <FieldError>{fieldError(fieldErrors, "name", locale)}</FieldError>
+          <FieldError id={`${nameId}-err`}>{nameErr}</FieldError>
         </div>
 
         <div>
           <label
             className="mb-2 block text-sm font-medium text-slate-200"
-            htmlFor={`${formId}-email`}
+            htmlFor={emailId}
           >
             {labels.email}
           </label>
           <input
-            aria-invalid={Boolean(fieldError(fieldErrors, "email", locale))}
-            className={cn(
-              baseInput,
-              fieldError(fieldErrors, "email", locale) && errorClass,
+            aria-describedby={describedBy(
+              `${emailId}-help`,
+              emailErr && `${emailId}-err`,
             )}
-            id={`${formId}-email`}
+            aria-invalid={Boolean(emailErr)}
+            autoComplete="email"
+            className={cn(baseInput, emailErr && errorClass)}
+            id={emailId}
             maxLength={160}
             name="email"
+            placeholder={labels.placeholders.email}
             required
             type="email"
           />
-          <FieldError>{fieldError(fieldErrors, "email", locale)}</FieldError>
+          <p className={helperClass} id={`${emailId}-help`}>
+            {labels.helpers.email}
+          </p>
+          <FieldError id={`${emailId}-err`}>{emailErr}</FieldError>
         </div>
       </div>
 
@@ -187,34 +231,42 @@ export function ContactForm({ locale, labels, contact }: ContactFormProps) {
         <div>
           <label
             className="mb-2 block text-sm font-medium text-slate-200"
-            htmlFor={`${formId}-company`}
+            htmlFor={companyId}
           >
             {labels.company}
           </label>
           <input
-            className={cn(
-              baseInput,
-              fieldError(fieldErrors, "company", locale) && errorClass,
+            aria-describedby={describedBy(
+              `${companyId}-help`,
+              companyErr && `${companyId}-err`,
             )}
-            id={`${formId}-company`}
+            aria-invalid={Boolean(companyErr)}
+            autoComplete="organization"
+            className={cn(baseInput, companyErr && errorClass)}
+            id={companyId}
             maxLength={120}
             name="company"
+            placeholder={labels.placeholders.company}
             type="text"
           />
-          <FieldError>{fieldError(fieldErrors, "company", locale)}</FieldError>
+          <p className={helperClass} id={`${companyId}-help`}>
+            {labels.helpers.company}
+          </p>
+          <FieldError id={`${companyId}-err`}>{companyErr}</FieldError>
         </div>
 
         <div>
           <label
             className="mb-2 block text-sm font-medium text-slate-200"
-            htmlFor={`${formId}-budget`}
+            htmlFor={budgetId}
           >
             {labels.budget}
           </label>
           <select
+            aria-describedby={describedBy(`${budgetId}-help`)}
             className={baseInput}
             defaultValue=""
-            id={`${formId}-budget`}
+            id={budgetId}
             name="budget"
           >
             <option value="">{labels.budgetOptions[0]}</option>
@@ -224,64 +276,99 @@ export function ContactForm({ locale, labels, contact }: ContactFormProps) {
               </option>
             ))}
           </select>
+          <p className={helperClass} id={`${budgetId}-help`}>
+            {labels.helpers.budget}
+          </p>
+        </div>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label
+            className="mb-2 block text-sm font-medium text-slate-200"
+            htmlFor={projectTypeId}
+          >
+            {labels.projectType}
+          </label>
+          <select
+            aria-describedby={describedBy(
+              projectTypeErr && `${projectTypeId}-err`,
+            )}
+            aria-invalid={Boolean(projectTypeErr)}
+            className={cn(baseInput, projectTypeErr && errorClass)}
+            defaultValue=""
+            id={projectTypeId}
+            name="projectType"
+            required
+          >
+            <option disabled value="">
+              {labels.projectType}
+            </option>
+            {labels.projectOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          <FieldError id={`${projectTypeId}-err`}>{projectTypeErr}</FieldError>
+        </div>
+
+        <div>
+          <label
+            className="mb-2 block text-sm font-medium text-slate-200"
+            htmlFor={deadlineId}
+          >
+            {labels.deadline}
+          </label>
+          <input
+            aria-describedby={describedBy(
+              `${deadlineId}-help`,
+              deadlineErr && `${deadlineId}-err`,
+            )}
+            aria-invalid={Boolean(deadlineErr)}
+            autoComplete="off"
+            className={cn(baseInput, deadlineErr && errorClass)}
+            id={deadlineId}
+            maxLength={80}
+            name="deadline"
+            placeholder={labels.placeholders.deadline}
+            type="text"
+          />
+          <p className={helperClass} id={`${deadlineId}-help`}>
+            {labels.helpers.deadline}
+          </p>
+          <FieldError id={`${deadlineId}-err`}>{deadlineErr}</FieldError>
         </div>
       </div>
 
       <div>
         <label
           className="mb-2 block text-sm font-medium text-slate-200"
-          htmlFor={`${formId}-projectType`}
-        >
-          {labels.projectType}
-        </label>
-        <select
-          aria-invalid={Boolean(
-            fieldError(fieldErrors, "projectType", locale),
-          )}
-          className={cn(
-            baseInput,
-            fieldError(fieldErrors, "projectType", locale) && errorClass,
-          )}
-          defaultValue=""
-          id={`${formId}-projectType`}
-          name="projectType"
-          required
-        >
-          <option disabled value="">
-            {labels.projectType}
-          </option>
-          {labels.projectOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-        <FieldError>
-          {fieldError(fieldErrors, "projectType", locale)}
-        </FieldError>
-      </div>
-
-      <div>
-        <label
-          className="mb-2 block text-sm font-medium text-slate-200"
-          htmlFor={`${formId}-message`}
+          htmlFor={messageId}
         >
           {labels.message}
         </label>
         <textarea
-          aria-invalid={Boolean(fieldError(fieldErrors, "message", locale))}
+          aria-describedby={describedBy(
+            `${messageId}-help`,
+            messageErr && `${messageId}-err`,
+          )}
+          aria-invalid={Boolean(messageErr)}
           className={cn(
             baseInput,
             "min-h-36 resize-y leading-7",
-            fieldError(fieldErrors, "message", locale) && errorClass,
+            messageErr && errorClass,
           )}
-          id={`${formId}-message`}
+          id={messageId}
           maxLength={2000}
           minLength={20}
           name="message"
           required
         />
-        <FieldError>{fieldError(fieldErrors, "message", locale)}</FieldError>
+        <p className={helperClass} id={`${messageId}-help`}>
+          {labels.helpers.message}
+        </p>
+        <FieldError id={`${messageId}-err`}>{messageErr}</FieldError>
       </div>
 
       <button
@@ -295,30 +382,36 @@ export function ContactForm({ locale, labels, contact }: ContactFormProps) {
 
       <p className="text-xs leading-6 text-slate-400">{labels.privacy}</p>
 
+      <p className="text-sm leading-6 text-slate-400">{labels.idleHint}</p>
+
       <div
         aria-live="polite"
         className={cn(
-          "min-h-12 rounded-[8px] border px-4 py-3 text-sm leading-6",
+          "rounded-[8px] border px-4 py-3 text-sm leading-6 transition",
           status === "success" &&
             "border-emerald-300/30 bg-emerald-300/10 text-emerald-100",
           status === "error" &&
             "border-rose-300/30 bg-rose-300/10 text-rose-100",
-          status !== "success" &&
-            status !== "error" &&
-            "border-white/10 bg-slate-950/50 text-slate-400",
+          status === "loading" &&
+            "border-cyan-300/30 bg-cyan-300/10 text-cyan-100",
+          status === "idle" && "hidden",
         )}
+        role="status"
       >
-        {message ||
-          `${labels.email}: ${contact.email} · ${labels.name}: ${contact.name}`}
+        {status === "loading" ? labels.sending : message}
       </div>
     </form>
   );
 }
 
-function FieldError({ children }: { children?: string }) {
+function FieldError({ children, id }: { children?: string; id: string }) {
   if (!children) {
     return null;
   }
 
-  return <p className="mt-2 text-xs leading-5 text-rose-200">{children}</p>;
+  return (
+    <p className="mt-2 text-xs leading-5 text-rose-200" id={id}>
+      {children}
+    </p>
+  );
 }

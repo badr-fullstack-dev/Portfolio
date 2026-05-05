@@ -99,13 +99,17 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
   const data = parsed.data;
-  const subject = `[Portfolio] ${data.projectType} - ${data.name}`;
+  const subjectCompany = data.company?.trim();
+  const subject = `[Portfolio] ${data.projectType} - ${
+    subjectCompany ? `${subjectCompany} (${data.name})` : data.name
+  }`;
   const text = [
     `Name: ${data.name}`,
     `Email: ${data.email}`,
     `Company: ${clean(data.company)}`,
-    `Budget: ${clean(data.budget)}`,
     `Project type: ${data.projectType}`,
+    `Budget: ${clean(data.budget)}`,
+    `Deadline: ${clean(data.deadline)}`,
     `Locale: ${data.locale || "fr"}`,
     "",
     "Message:",
