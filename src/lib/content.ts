@@ -52,6 +52,12 @@ type SiteContent = {
     faq: string;
     contact: string;
   };
+  alternance: {
+    label: string;
+    message: string;
+    cta: string;
+    ariaLabel: string;
+  };
   hero: {
     eyebrow: string;
     title: string;
@@ -175,6 +181,13 @@ export const content: Record<Locale, SiteContent> = {
       faq: "FAQ",
       contact: "Contact",
     },
+    alternance: {
+      label: "Alternance 2026",
+      message:
+        "En recherche d'alternance développeur full-stack — rentrée septembre 2026.",
+      cta: "Recruter en alternance",
+      ariaLabel: "Recherche d'alternance",
+    },
     hero: {
       eyebrow: "Freelance IA et full-stack basé à Paris",
       title:
@@ -183,7 +196,8 @@ export const content: Record<Locale, SiteContent> = {
         "Automations IA, chatbots et applications full-stack qui réduisent le travail manuel et les délais — sans démo qui s'effondre dès le premier vrai cas.",
       primaryCta: "Discuter de votre besoin",
       secondaryCta: "Voir les projets",
-      availability: "Disponible pour missions freelance et remote",
+      availability:
+        "Disponible pour alternance full-stack (rentrée sept. 2026) — aussi missions freelance et remote",
       avatarAlt: "Photo de profil GitHub de Badreddine",
       signalTitle: "Signal projet",
       signalItems: [
@@ -500,6 +514,13 @@ export const content: Record<Locale, SiteContent> = {
       faq: "FAQ",
       contact: "Contact",
     },
+    alternance: {
+      label: "Apprenticeship 2026",
+      message:
+        "Seeking a full-stack developer apprenticeship (alternance) — starting September 2026 in France.",
+      cta: "Hire me as an apprentice",
+      ariaLabel: "Apprenticeship search",
+    },
     hero: {
       eyebrow: "AI and full-stack freelancer based in Paris",
       title: "I help SMBs turn repetitive workflows into reliable web tools.",
@@ -507,7 +528,8 @@ export const content: Record<Locale, SiteContent> = {
         "AI automations, chatbots and full-stack apps that cut manual work and delivery time — not just a demo that breaks on the first real case.",
       primaryCta: "Discuss your need",
       secondaryCta: "See the projects",
-      availability: "Available for freelance and remote work",
+      availability:
+        "Open to a full-stack apprenticeship (Sept. 2026 start in France) — also freelance and remote engagements",
       avatarAlt: "Badreddine GitHub profile photo",
       signalTitle: "Project signal",
       signalItems: [
