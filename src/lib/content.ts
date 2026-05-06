@@ -58,6 +58,9 @@ type SiteContent = {
     cta: string;
     ariaLabel: string;
   };
+  studentBadge: {
+    text: string;
+  };
   hero: {
     eyebrow: string;
     title: string;
@@ -187,6 +190,10 @@ export const content: Record<Locale, SiteContent> = {
         "En recherche d'alternance développeur full-stack — rentrée septembre 2026.",
       cta: "Recruter en alternance",
       ariaLabel: "Recherche d'alternance",
+    },
+    studentBadge: {
+      text:
+        "Étudiant ingénieur à l'ESIEA — En recherche d'alternance développeur full-stack pour la rentrée de septembre 2026 (Paris / Île-de-France).",
     },
     hero: {
       eyebrow: "Freelance IA et full-stack basé à Paris",
@@ -520,6 +527,10 @@ export const content: Record<Locale, SiteContent> = {
         "Seeking a full-stack developer apprenticeship (alternance) — starting September 2026 in France.",
       cta: "Hire me as an apprentice",
       ariaLabel: "Apprenticeship search",
+    },
+    studentBadge: {
+      text:
+        "Engineering student at ESIEA — Seeking a full-stack developer apprenticeship starting September 2026 (Paris / Île-de-France area).",
     },
     hero: {
       eyebrow: "AI and full-stack freelancer based in Paris",

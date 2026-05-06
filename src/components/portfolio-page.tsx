@@ -99,6 +99,12 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
               <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-white sm:text-6xl lg:text-7xl">
                 {page.hero.title}
               </h1>
+              <span className="mt-5 inline-flex max-w-2xl items-start gap-2 rounded-2xl border border-cyan-300/30 bg-cyan-300/5 px-3 py-1.5 text-sm leading-relaxed text-cyan-50">
+                <span aria-hidden="true" className="text-base leading-relaxed">
+                  🎓
+                </span>
+                <span>{page.studentBadge.text}</span>
+              </span>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
                 {page.hero.subtitle}
               </p>
