@@ -322,7 +322,7 @@ export const content: Record<Locale, SiteContent> = {
             "Pourquoi c'est pertinent: prouve la capacité à livrer rapidement un site business présentable.",
           ],
           links: [
-            { label: "Demo", href: "https://cogelas-website.vercel.app" },
+            { label: "Site", href: "https://cogelas.fr" },
             {
               label: "GitHub",
               href: "https://github.com/badr-fullstack-dev/Cogelas-Website",
@@ -341,6 +341,7 @@ export const content: Record<Locale, SiteContent> = {
             "Pourquoi c'est pertinent: cas d'usage 'site simple, livré, sans bloat' pour les très petites entreprises qui veulent une présence claire.",
           ],
           links: [
+            { label: "Site", href: "https://halteaevents.fr" },
             {
               label: "GitHub",
               href: "https://github.com/badr-fullstack-dev/Haltea-website",
@@ -658,7 +659,7 @@ export const content: Record<Locale, SiteContent> = {
             "Why it's relevant: shows the ability to ship a presentable business site quickly.",
           ],
           links: [
-            { label: "Demo", href: "https://cogelas-website.vercel.app" },
+            { label: "Site", href: "https://cogelas.fr" },
             {
               label: "GitHub",
               href: "https://github.com/badr-fullstack-dev/Cogelas-Website",
@@ -677,6 +678,7 @@ export const content: Record<Locale, SiteContent> = {
             "Why it's relevant: 'simple, shipped, no bloat' use case for very small businesses that need a clear web presence.",
           ],
           links: [
+            { label: "Site", href: "https://halteaevents.fr" },
             {
               label: "GitHub",
               href: "https://github.com/badr-fullstack-dev/Haltea-website",
