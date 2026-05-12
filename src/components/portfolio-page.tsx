@@ -16,6 +16,7 @@ import {
   Workflow,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import type { ComponentType } from "react";
 
 import { ContactForm } from "@/components/contact-form";
@@ -422,9 +423,17 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
       <footer className="border-t border-white/10 px-5 py-8 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>{page.footer.tagline}</p>
-          <p>
-            © {year} {contactInfo.name}. {page.footer.rights}
-          </p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+            <Link
+              className="rounded-[6px] px-1 text-sm text-slate-400 transition hover:text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+              href={locale === "fr" ? "/recruteurs" : "/en/recruiters"}
+            >
+              {locale === "fr" ? "Pour les recruteurs" : "For recruiters"}
+            </Link>
+            <p>
+              © {year} {contactInfo.name}. {page.footer.rights}
+            </p>
+          </div>
         </div>
       </footer>
     </div>
