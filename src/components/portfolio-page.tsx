@@ -6,7 +6,6 @@ import {
   Code2,
   GitBranch,
   Globe2,
-  GraduationCap,
   Mail,
   Network,
   Phone,
@@ -63,31 +62,6 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
       >
         Skip to content
       </a>
-      <div className="relative border-b border-emerald-300/30 bg-gradient-to-r from-emerald-500/15 via-cyan-500/15 to-emerald-500/15">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-3 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-          <div className="flex items-start gap-3 sm:items-center">
-            <span className="grid size-8 shrink-0 place-items-center rounded-[8px] border border-emerald-300/40 bg-emerald-300/10 text-emerald-100">
-              <GraduationCap aria-hidden size={16} />
-            </span>
-            <p className="text-sm leading-6 text-emerald-50">
-              <span className="mr-2 inline-flex rounded-[6px] border border-emerald-300/40 bg-emerald-300/10 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-100">
-                {page.alternance.label}
-              </span>
-              <span className="sr-only">: </span>
-              <span className="font-medium text-white">
-                {page.alternance.message}
-              </span>
-            </p>
-          </div>
-          <a
-            className="inline-flex shrink-0 items-center gap-2 rounded-[7px] border border-emerald-300/50 bg-emerald-300/15 px-4 py-2 text-sm font-semibold text-emerald-50 transition hover:bg-emerald-300/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200"
-            href="#contact"
-          >
-            {page.alternance.cta}
-            <ArrowUpRight aria-hidden size={15} />
-          </a>
-        </div>
-      </div>
       <SiteHeader content={page} />
       <main id="main">
         <section className="relative border-b border-white/10 px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
@@ -99,12 +73,6 @@ export function PortfolioPage({ locale }: PortfolioPageProps) {
               <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-white sm:text-6xl lg:text-7xl">
                 {page.hero.title}
               </h1>
-              <span className="mt-5 inline-flex max-w-2xl items-start gap-2 rounded-2xl border border-cyan-300/30 bg-cyan-300/5 px-3 py-1.5 text-sm leading-relaxed text-cyan-50">
-                <span aria-hidden="true" className="text-base leading-relaxed">
-                  🎓
-                </span>
-                <span>{page.studentBadge.text}</span>
-              </span>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl sm:leading-9">
                 {page.hero.subtitle}
               </p>

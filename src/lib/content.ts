@@ -204,7 +204,7 @@ export const content: Record<Locale, SiteContent> = {
       primaryCta: "Discuter de votre besoin",
       secondaryCta: "Voir les projets",
       availability:
-        "Disponible pour alternance full-stack (rentrée sept. 2026) — aussi missions freelance et remote",
+        "Projets livrés en production pour des PME françaises — Paris ou remote",
       avatarAlt: "Photo de profil GitHub de Badreddine",
       signalTitle: "Signal projet",
       signalItems: [
@@ -214,11 +214,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     proof: [
-      "5 projets publics livrés",
+      "3 sites client en production",
       "Apps full-stack React/Node",
       "Automations IA et chatbots",
       "Sites et e-commerce",
-      "Français · Anglais · Arabe",
+      "Français · Anglais",
     ],
     services: {
       eyebrow: "Ce que je livre",
@@ -278,7 +278,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Construit: HUD futuriste, voix, mémoire, audit log et orchestrateur Python avec policy engine.",
             "Surface technique: front Tauri/React, runtime Python, bridge local, niveaux de risque et approbations.",
-            "Pourquoi c'est pertinent: prouve la maîtrise d'un produit IA complet, pas juste d'un wrapper de chat.",
+            "Démonstration: produit IA complet avec policy engine et niveaux de risque — pas un wrapper de chat.",
           ],
           links: [
             {
@@ -289,14 +289,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "UMOD",
-          category: "Client e-commerce français",
+          category: "Stage full-stack — e-commerce",
           summary:
-            "Activité e-commerce française qui avait besoin d'une page d'accueil refaite, d'un calculateur métier et d'un chatbot de support.",
-          stack: ["JavaScript", "Node.js", "Chatbot", "Landing page"],
+            "Stage full-stack chez UMOD (e-commerce, transition énergétique). Refonte complète du site, calculateur d'aides publiques (frontend + backend), et chatbot IA de qualification — tous déployés en production.",
+          stack: ["React", "Node.js", "JavaScript", "OpenAI API"],
           bullets: [
-            "Construit: landing, calculateur d'aides (frontend + backend) et chatbot (UI + API) en dépôts publics.",
-            "Surface technique: JavaScript et Node.js, déploiement public, présence sur le site umod.fr.",
-            "Pourquoi c'est pertinent: une seule mission qui couvre front, back et IA, livrée en production.",
+            "Livré: refonte du site vitrine, calculateur d'aides publiques (frontend + backend) et chatbot IA de qualification — tous en production sur umod.fr.",
+            "Stack: React, Node.js, JavaScript, OpenAI API. Code dans des dépôts publics, déploiement public.",
+            "Pour vous: une seule mission qui prouve la capacité à livrer front, back et IA ensemble en production — pas un projet d'école.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
@@ -312,14 +312,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "Cogelas Website",
-          category: "Site client livré",
+          category: "Site de présence — client BTP",
           summary:
             "Site vitrine déployé pour Cogelas, conçu pour présenter l'activité de manière claire, moderne et rapide à mettre en ligne.",
           stack: ["HTML", "CSS", "Vercel"],
           bullets: [
             "Construit: pages publiques structurées, mise en page responsive, déploiement Vercel.",
             "Surface technique: HTML et CSS, hébergement Vercel, démo publique accessible en ligne.",
-            "Pourquoi c'est pertinent: prouve la capacité à livrer rapidement un site business présentable.",
+            "Pour vous: site de présence livré rapidement, prêt à mettre en ligne sans dépendance freelance après la livraison.",
           ],
           links: [
             { label: "Site", href: "https://cogelas.fr" },
@@ -331,14 +331,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "Haltea Website",
-          category: "Site client",
+          category: "Site de présence — client événementiel",
           summary:
             "Site vitrine pour Haltea, publié dans le portfolio GitHub comme preuve de travail web orienté présentation business.",
           stack: ["HTML", "CSS"],
           bullets: [
             "Construit: structure de pages simple, focalisée sur la lisibilité et la présentation de l'activité.",
             "Surface technique: HTML et CSS, sans framework, code accessible publiquement.",
-            "Pourquoi c'est pertinent: cas d'usage 'site simple, livré, sans bloat' pour les très petites entreprises qui veulent une présence claire.",
+            "Pour vous: cas d'usage 'site simple, livré, sans bloat' pour TPE qui veulent une présence claire en ligne.",
           ],
           links: [
             { label: "Site", href: "https://halteaevents.fr" },
@@ -357,7 +357,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Construit: catalogue, panier et parcours checkout côté frontend; API et logique métier côté backend.",
             "Surface technique: React et Node.js, deux dépôts distincts, démo frontend déployée sur Vercel.",
-            "Pourquoi c'est pertinent: référence concrète pour un projet e-commerce avec une séparation propre front et back.",
+            "Démonstration: projet e-commerce avec séparation propre front/back — catalogue, panier, checkout. Référence d'architecture.",
           ],
           links: [
             {
@@ -393,7 +393,7 @@ export const content: Record<Locale, SiteContent> = {
       body: [
         "Badreddine est basé à Paris et construit des sites, applications web, outils IA et automations. Son positionnement freelance combine exécution full-stack et prompt engineering pratique.",
         "L'objectif n'est pas de faire une démo impressionnante une seule fois, mais de créer des systèmes qui restent utiles quand un vrai utilisateur arrive avec un vrai cas métier.",
-        "Il travaille en français, anglais et arabe, avec une préférence pour les missions où un prototype rapide peut devenir un outil fiable.",
+        "Il travaille en français et anglais, avec une préférence pour les missions où un prototype rapide peut devenir un outil fiable.",
       ],
       techTitle: "Stack utilisée",
       tech: sharedTech,
@@ -440,7 +440,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Dans quelles langues peut-on travailler ?",
           answer:
-            "Français, anglais et arabe à l'oral comme à l'écrit. Les livrables techniques (documentation, README, commits) sont en anglais par défaut, sauf demande contraire.",
+            "Français et anglais à l'oral comme à l'écrit. Les livrables techniques (documentation, README, commits) sont en anglais par défaut, sauf demande contraire.",
         },
       ],
     },
@@ -541,7 +541,7 @@ export const content: Record<Locale, SiteContent> = {
       primaryCta: "Discuss your need",
       secondaryCta: "See the projects",
       availability:
-        "Open to a full-stack apprenticeship (Sept. 2026 start in France) — also freelance and remote engagements",
+        "Projects shipped to production for French SMBs — Paris or remote",
       avatarAlt: "Badreddine GitHub profile photo",
       signalTitle: "Project signal",
       signalItems: [
@@ -551,11 +551,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     proof: [
-      "5 shipped public projects",
+      "3 client sites in production",
       "Full-stack React/Node apps",
       "AI automations and chatbots",
       "Sites and e-commerce",
-      "French · English · Arabic",
+      "French · English",
     ],
     services: {
       eyebrow: "What I deliver",
@@ -615,7 +615,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Built: futuristic HUD, voice, memory, audit log, and a Python orchestrator with a policy engine.",
             "Tech surface: Tauri/React front-end, Python runtime, local bridge, risk tiers and approvals.",
-            "Why it's relevant: proves end-to-end AI product delivery, not just a chat wrapper.",
+            "Demonstration: end-to-end AI product with policy engine and risk-tier architecture — not a chat wrapper.",
           ],
           links: [
             {
@@ -626,14 +626,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "UMOD",
-          category: "French e-commerce client",
+          category: "Full-stack internship — e-commerce",
           summary:
-            "French e-commerce that needed a rebuilt landing page, a business calculator, and a support chatbot.",
-          stack: ["JavaScript", "Node.js", "Chatbot", "Landing page"],
+            "Full-stack internship at UMOD (e-commerce, energy transition). Complete site rebuild, public-aid calculator (frontend + backend), and AI qualification chatbot — all shipped to production.",
+          stack: ["React", "Node.js", "JavaScript", "OpenAI API"],
           bullets: [
-            "Built: landing page, public-aid calculator (frontend + backend), and chatbot (UI + API) in public repos.",
-            "Tech surface: JavaScript and Node.js, public deployment, present on the umod.fr site.",
-            "Why it's relevant: a single engagement covering frontend, backend, and AI, shipped to production.",
+            "Shipped: site rebuild, public-aid calculator (frontend + backend), and AI qualification chatbot — all live on umod.fr.",
+            "Stack: React, Node.js, JavaScript, OpenAI API. Public repos, public deployment.",
+            "For you: one engagement proving the ability to ship frontend, backend, and AI together in production — not a school project.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
@@ -649,14 +649,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "Cogelas Website",
-          category: "Delivered client website",
+          category: "Presence site — construction client",
           summary:
             "Showcase site shipped for Cogelas, designed to present the business clearly, modernly, and on a fast launch path.",
           stack: ["HTML", "CSS", "Vercel"],
           bullets: [
             "Built: structured public pages, responsive layout, Vercel deployment.",
             "Tech surface: HTML and CSS, Vercel hosting, demo publicly accessible online.",
-            "Why it's relevant: shows the ability to ship a presentable business site quickly.",
+            "For you: a presence site shipped fast, ready to go live with no ongoing freelance dependency.",
           ],
           links: [
             { label: "Site", href: "https://cogelas.fr" },
@@ -668,14 +668,14 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           title: "Haltea Website",
-          category: "Client website",
+          category: "Presence site — events client",
           summary:
             "Showcase site for Haltea, published in the GitHub portfolio as proof of business-focused web work.",
           stack: ["HTML", "CSS"],
           bullets: [
             "Built: simple page structure focused on readability and presenting the business.",
             "Tech surface: plain HTML and CSS, no framework, code publicly accessible.",
-            "Why it's relevant: 'simple, shipped, no bloat' use case for very small businesses that need a clear web presence.",
+            "For you: a 'simple, shipped, no bloat' use case for very small businesses that need a clear web presence.",
           ],
           links: [
             { label: "Site", href: "https://halteaevents.fr" },
@@ -694,7 +694,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Built: catalog, cart and checkout flow on the frontend; API and business logic on the backend.",
             "Tech surface: React and Node.js, two separate repos, frontend demo deployed on Vercel.",
-            "Why it's relevant: concrete reference for an e-commerce project with a clean front/back split.",
+            "Demonstration: e-commerce project with a clean front/back split — catalog, cart, checkout. Architecture reference.",
           ],
           links: [
             {
@@ -730,7 +730,7 @@ export const content: Record<Locale, SiteContent> = {
       body: [
         "Badreddine is based in Paris and builds websites, web apps, AI tools and automations. His freelance positioning combines full-stack execution with practical prompt engineering.",
         "The goal is not to make one impressive demo, but to create systems that remain useful when real users bring real business cases.",
-        "He works in French, English and Arabic, with a preference for missions where a fast prototype can become a reliable tool.",
+        "He works in French and English, with a preference for missions where a fast prototype can become a reliable tool.",
       ],
       techTitle: "Working stack",
       tech: sharedTech,
@@ -775,7 +775,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           question: "Which languages can we work in?",
           answer:
-            "French, English, and Arabic, spoken and written. Technical deliverables (documentation, README, commits) default to English unless requested otherwise.",
+            "French and English, spoken and written. Technical deliverables (documentation, README, commits) default to English unless requested otherwise.",
         },
       ],
     },
