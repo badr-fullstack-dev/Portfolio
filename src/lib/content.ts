@@ -3,6 +3,7 @@ import type {
   ContactInfo,
   FaqItem,
   Locale,
+  RecruitersContent,
   SeoConfig,
   ServiceItem,
   TechItem,
@@ -841,6 +842,314 @@ export const content: Record<Locale, SiteContent> = {
     footer: {
       tagline: "AI automations, web apps and business sites from Paris.",
       rights: "All rights reserved.",
+    },
+  },
+};
+
+export const recruitersContent: Record<Locale, RecruitersContent> = {
+  fr: {
+    locale: "fr",
+    altLocale: "en",
+    altLocaleLabel: "EN",
+    route: "/recruteurs",
+    altRoute: "/en/recruiters",
+    hero: {
+      eyebrow: "Pour les recruteurs",
+      title:
+        "Étudiant ingénieur ESIEA en recherche d'alternance full-stack — rentrée septembre 2026.",
+      subtitle:
+        "Builder de produits IA full-stack. Trois missions client en production (e-commerce, BTP, événementiel) et un projet d'agent IA desktop personnel. Je cherche une équipe technique ambitieuse pour contribuer concrètement sur des produits.",
+      keyFacts: [
+        { label: "Contrat", value: "Apprentissage" },
+        { label: "Rentrée", value: "Septembre 2026" },
+        { label: "Rythme", value: "2 semaines entreprise / 2 semaines école" },
+        { label: "Durée", value: "Cycle 3 ans (2026 → 2029)" },
+        { label: "Localisation", value: "Paris + Île-de-France" },
+      ],
+      primaryCta: {
+        label: "Télécharger mon CV",
+        href: "/cv-badreddine-el-aouba.pdf",
+      },
+      secondaryCta: { label: "Voir mes projets", href: "/#work" },
+    },
+    profile: {
+      eyebrow: "Profil",
+      title: "Étudiant ingénieur ESIEA, 2e année — cycle ingénieur (Bac+5).",
+      body: [
+        "Je suis en 2e année du cycle ingénieur de l'ESIEA (campus Ivry-sur-Seine), en formation initiale jusqu'à septembre 2026. À partir de la rentrée 2026, je passe en alternance pour les trois années restantes.",
+        "Hors école, je construis depuis deux ans des produits web et des outils IA — du chatbot OpenAI à l'agent desktop avec policy engine. Trois sites sont en production pour des clients réels.",
+      ],
+    },
+    positioning: {
+      eyebrow: "Ce que je cherche",
+      title:
+        "Une équipe qui construit des produits IA full-stack — pas un wrapper de plus.",
+      body: [
+        "Je veux contribuer concrètement à un produit, pas faire du support tickets pendant trois ans. Mon créneau: combiner exécution full-stack (React/Node) et intégration LLM/agentique sur du code en production.",
+        "Les environnements qui m'attirent: startups en croissance, équipes IA dans des structures plus grandes, scale-ups produit. Stack ouverte — j'ai appris React, Python et Tauri en autodidacte sur des projets perso.",
+      ],
+    },
+    proof: {
+      eyebrow: "Preuves",
+      title: "Ce que j'ai déjà livré seul.",
+      intro:
+        "Trois sites client en production et un agent IA desktop avec architecture multi-sous-agents. Détails complets sur la page d'accueil.",
+      items: [
+        {
+          title: "UMOD — stage full-stack (juin-juillet 2025)",
+          description:
+            "Chatbot OpenAI, calculateur d'aides publiques, refonte complète du site. Trois livrables en production.",
+        },
+        {
+          title: "Jarvis Desktop AI Assistant",
+          description:
+            "Agent IA local pour Windows, voix + plan + exécution. 4 sous-agents avec policy engine. Stack: Python, Tauri, React.",
+        },
+        {
+          title: "Cogelas + Haltea (freelance)",
+          description:
+            "Refonte complète de deux sites vitrines client (BTP, événementiel). Migration Vercel + Resend + DNS au nom du client.",
+        },
+      ],
+      seeMore: { label: "Détails des projets →", href: "/#work" },
+    },
+    stack: {
+      eyebrow: "Stack technique",
+      title: "Ce que je manipule au quotidien.",
+      groups: [
+        {
+          label: "Front-end",
+          items: [
+            "React",
+            "TypeScript",
+            "JavaScript (ES6+)",
+            "Tailwind CSS",
+            "HTML5",
+            "CSS3",
+          ],
+        },
+        {
+          label: "Back-end",
+          items: ["Node.js", "Express", "API REST", "Python"],
+        },
+        {
+          label: "Bases de données",
+          items: ["PostgreSQL", "MongoDB", "MySQL"],
+        },
+        {
+          label: "IA & agentique",
+          items: [
+            "OpenAI API",
+            "Claude",
+            "Policy engines",
+            "Prompt engineering",
+            "Architecture multi-agent",
+          ],
+        },
+        {
+          label: "Langages",
+          items: ["JavaScript", "TypeScript", "Python", "C", "SQL"],
+        },
+        {
+          label: "Outils & déploiement",
+          items: [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Cursor",
+            "Vercel",
+            "Render",
+            "Resend",
+            "Postman",
+            "Stripe API",
+          ],
+        },
+        {
+          label: "Desktop & systèmes",
+          items: ["Tauri", "Linux", "Windows"],
+        },
+      ],
+    },
+    languages: {
+      eyebrow: "Langues",
+      title: "Trois langues à l'oral comme à l'écrit.",
+      items: [
+        { label: "Français", level: "Langue maternelle" },
+        { label: "Arabe", level: "Langue maternelle" },
+        { label: "Anglais", level: "Courant — TOEIC 800" },
+      ],
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Pour discuter d'un poste.",
+      intro:
+        "CV à télécharger ci-dessous, ou contactez-moi directement. Réponse sous 48 h ouvrées.",
+      cvLabel: "Télécharger mon CV (PDF)",
+      cvHref: "/cv-badreddine-el-aouba.pdf",
+      schoolEmailLabel: "Email école (ESIEA)",
+      schoolEmail: "elaouba@et.esiea.fr",
+      personalEmailLabel: "Email personnel",
+      personalEmail: "contact@badreddine.dev",
+      phoneLabel: "Téléphone",
+      phone: "+33 6 78 39 80 91",
+      linkedinLabel: "LinkedIn",
+      linkedinHref:
+        "https://www.linkedin.com/in/badreddine-el-aouba-952b84352/",
+      githubLabel: "GitHub",
+      githubHref: "https://github.com/badr-fullstack-dev",
+    },
+  },
+  en: {
+    locale: "en",
+    altLocale: "fr",
+    altLocaleLabel: "FR",
+    route: "/en/recruiters",
+    altRoute: "/recruteurs",
+    hero: {
+      eyebrow: "For recruiters",
+      title:
+        "ESIEA engineering student seeking a full-stack apprenticeship — September 2026 start.",
+      subtitle:
+        "AI-product builder, full-stack. Three client sites in production (e-commerce, construction, events) and a personal desktop AI agent project. Looking for an ambitious technical team where I can contribute meaningfully to real products.",
+      keyFacts: [
+        { label: "Contract", value: "Apprenticeship (apprentissage)" },
+        { label: "Start", value: "September 2026" },
+        { label: "Rhythm", value: "2 weeks at company / 2 weeks at school" },
+        { label: "Duration", value: "3-year cycle (2026 → 2029)" },
+        { label: "Location", value: "Paris + Île-de-France" },
+      ],
+      primaryCta: {
+        label: "Download my CV",
+        href: "/cv-badreddine-el-aouba.pdf",
+      },
+      secondaryCta: { label: "See my projects", href: "/en/#work" },
+    },
+    profile: {
+      eyebrow: "Profile",
+      title:
+        "ESIEA engineering student, year 2 of 5 (engineering cycle, Bac+5).",
+      body: [
+        "I'm in year 2 of the ESIEA engineering cycle (Ivry-sur-Seine campus), in initial coursework until September 2026. From the September 2026 intake, I switch to apprenticeship for the remaining three years.",
+        "Outside school, I've been building web products and AI tools for two years — from an OpenAI chatbot to a desktop agent with a policy engine. Three sites are in production for real clients.",
+      ],
+    },
+    positioning: {
+      eyebrow: "What I'm looking for",
+      title:
+        "A team building real AI-product full-stack — not yet another wrapper.",
+      body: [
+        "I want to contribute meaningfully to a product, not push support tickets for three years. My lane: combining full-stack execution (React/Node) with LLM/agentic integration on production code.",
+        "Environments that interest me: growth-stage startups, AI teams inside larger structures, product scale-ups. Stack-open — I've taught myself React, Python, and Tauri through personal projects.",
+      ],
+    },
+    proof: {
+      eyebrow: "Proof",
+      title: "What I've already shipped solo.",
+      intro:
+        "Three client sites in production and a multi-subagent desktop AI agent. Full details on the homepage.",
+      items: [
+        {
+          title: "UMOD — full-stack internship (June-July 2025)",
+          description:
+            "OpenAI chatbot, public-aid calculator, complete site rebuild. Three deliverables in production.",
+        },
+        {
+          title: "Jarvis Desktop AI Assistant",
+          description:
+            "Local AI agent for Windows: voice + plan + execution. 4 subagents with a policy engine. Stack: Python, Tauri, React.",
+        },
+        {
+          title: "Cogelas + Haltea (freelance)",
+          description:
+            "Full redesigns of two client showcase sites (construction, events). Migrated to Vercel + Resend + DNS under client name.",
+        },
+      ],
+      seeMore: { label: "Project details →", href: "/en/#work" },
+    },
+    stack: {
+      eyebrow: "Technical stack",
+      title: "What I work with day to day.",
+      groups: [
+        {
+          label: "Front-end",
+          items: [
+            "React",
+            "TypeScript",
+            "JavaScript (ES6+)",
+            "Tailwind CSS",
+            "HTML5",
+            "CSS3",
+          ],
+        },
+        {
+          label: "Back-end",
+          items: ["Node.js", "Express", "REST APIs", "Python"],
+        },
+        {
+          label: "Databases",
+          items: ["PostgreSQL", "MongoDB", "MySQL"],
+        },
+        {
+          label: "AI & agentic",
+          items: [
+            "OpenAI API",
+            "Claude",
+            "Policy engines",
+            "Prompt engineering",
+            "Multi-agent architecture",
+          ],
+        },
+        {
+          label: "Languages",
+          items: ["JavaScript", "TypeScript", "Python", "C", "SQL"],
+        },
+        {
+          label: "Tools & deployment",
+          items: [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Cursor",
+            "Vercel",
+            "Render",
+            "Resend",
+            "Postman",
+            "Stripe API",
+          ],
+        },
+        {
+          label: "Desktop & systems",
+          items: ["Tauri", "Linux", "Windows"],
+        },
+      ],
+    },
+    languages: {
+      eyebrow: "Languages",
+      title: "Three languages, spoken and written.",
+      items: [
+        { label: "French", level: "Native" },
+        { label: "Arabic", level: "Native" },
+        { label: "English", level: "Fluent — TOEIC 800" },
+      ],
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "To discuss a position.",
+      intro:
+        "CV available for download below, or contact me directly. Reply within 2 working days.",
+      cvLabel: "Download my CV (PDF)",
+      cvHref: "/cv-badreddine-el-aouba.pdf",
+      schoolEmailLabel: "School email (ESIEA)",
+      schoolEmail: "elaouba@et.esiea.fr",
+      personalEmailLabel: "Personal email",
+      personalEmail: "contact@badreddine.dev",
+      phoneLabel: "Phone",
+      phone: "+33 6 78 39 80 91",
+      linkedinLabel: "LinkedIn",
+      linkedinHref:
+        "https://www.linkedin.com/in/badreddine-el-aouba-952b84352/",
+      githubLabel: "GitHub",
+      githubHref: "https://github.com/badr-fullstack-dev",
     },
   },
 };
