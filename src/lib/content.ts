@@ -271,14 +271,14 @@ export const content: Record<Locale, SiteContent> = {
       items: [
         {
           title: "Jarvis Desktop AI Assistant",
-          category: "Projet personnel IA",
+          category: "Projet personnel — agent desktop IA",
           summary:
-            "Assistant desktop autonome pour Windows, conçu pour exécuter des actions sur la machine sans laisser l'utilisateur perdre la main.",
+            "Idée née un soir: et si un agent IA contrôlait mon PC à la voix, façon Tony Stark — un assistant qui comprend, planifie, et agit à ma place ? Première vraie incursion dans l'architecture agentique et dans une stack que je ne connaissais pas (Python, Tauri, Rust).",
           stack: ["Python", "React", "Tauri", "Policy engine"],
           bullets: [
-            "Construit: HUD futuriste, voix, mémoire, audit log et orchestrateur Python avec policy engine.",
-            "Surface technique: front Tauri/React, runtime Python, bridge local, niveaux de risque et approbations.",
-            "Démonstration: produit IA complet avec policy engine et niveaux de risque — pas un wrapper de chat.",
+            "État actuel: commandes vocales simples (ouvrir une app, lancer un navigateur), exécution d'actions de base (app.launch, browser.read, browser.fetch), génération d'un plan à partir du contexte. Architecture à 4 sous-agents — dont un dédié sécurité et un à la planification.",
+            "Stack: front Tauri/React, runtime Python, bridge local. Policy engine et niveaux de risque pour qu'aucune action sensible ne s'exécute sans validation explicite.",
+            "Choix assumé: tant que la couche sécurité n'est pas éprouvée, l'agent n'a pas le contrôle complet de la machine. La prochaine itération porte sur les tâches complexes et l'élargissement contrôlé du périmètre. Ce que ça prouve: produit IA agentique complet — pas un wrapper de chat.",
           ],
           links: [
             {
@@ -291,12 +291,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "UMOD",
           category: "Stage full-stack — e-commerce",
           summary:
-            "Stage full-stack chez UMOD (e-commerce, transition énergétique). Refonte complète du site, calculateur d'aides publiques (frontend + backend), et chatbot IA de qualification — tous déployés en production.",
+            "Premier stage pro chez UMOD (e-commerce, transition énergétique). Arrivé pour apprendre comment marche un commerce, parti avec trois outils en production: chatbot IA, calculateur d'aides publiques, refonte complète du site.",
           stack: ["React", "Node.js", "JavaScript", "OpenAI API"],
           bullets: [
-            "Livré: refonte du site vitrine, calculateur d'aides publiques (frontend + backend) et chatbot IA de qualification — tous en production sur umod.fr.",
-            "Stack: React, Node.js, JavaScript, OpenAI API. Code dans des dépôts publics, déploiement public.",
-            "Pour vous: une seule mission qui prouve la capacité à livrer front, back et IA ensemble en production — pas un projet d'école.",
+            "Sur initiative perso, proposé et construit un chatbot OpenAI en 3 jours: qualification des demandes, prise de RDV automatique, Q&A sur les services. Mis en prod sur umod.fr.",
+            "Enchaîné sur un calculateur d'aides publiques (frontend + backend), puis la refonte complète du site — un mois, premier site marketing complet. Contrainte WordPress contournée avec un wrapper iframe vers une instance Netlify, pour livrer sans casser leur infra existante.",
+            "Ce que je referais autrement: déploiement direct sur Vercel avec DNS au nom du client, structure projet plus propre. Ce qui reste vrai: trois livrables en prod chez un vrai e-commerce, à partir d'une feuille blanche.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
@@ -608,14 +608,14 @@ export const content: Record<Locale, SiteContent> = {
       items: [
         {
           title: "Jarvis Desktop AI Assistant",
-          category: "Personal AI project",
+          category: "Personal project — desktop AI agent",
           summary:
-            "Autonomous Windows desktop assistant designed to take real actions on the machine without losing user oversight.",
+            "Idea that hit me one night: what if an AI agent ran my PC by voice, Tony Stark style — an assistant that understands, plans, and acts on my behalf? First real venture into agentic architecture and into a stack I didn't know (Python, Tauri, Rust).",
           stack: ["Python", "React", "Tauri", "Policy engine"],
           bullets: [
-            "Built: futuristic HUD, voice, memory, audit log, and a Python orchestrator with a policy engine.",
-            "Tech surface: Tauri/React front-end, Python runtime, local bridge, risk tiers and approvals.",
-            "Demonstration: end-to-end AI product with policy engine and risk-tier architecture — not a chat wrapper.",
+            "Current state: simple voice commands (launch an app, open a browser), basic action execution (app.launch, browser.read, browser.fetch), plan generation from context. 4-subagent architecture — one dedicated to security, one to planning.",
+            "Stack: Tauri/React frontend, Python runtime, local bridge. Policy engine and risk tiers so no sensitive action runs without explicit approval.",
+            "Deliberate choice: until the security layer is proven, the agent does not have full control of the machine. Next iteration: complex tasks and controlled scope expansion. What it proves: a complete agentic AI product — not a chat wrapper.",
           ],
           links: [
             {
@@ -628,12 +628,12 @@ export const content: Record<Locale, SiteContent> = {
           title: "UMOD",
           category: "Full-stack internship — e-commerce",
           summary:
-            "Full-stack internship at UMOD (e-commerce, energy transition). Complete site rebuild, public-aid calculator (frontend + backend), and AI qualification chatbot — all shipped to production.",
+            "First professional internship at UMOD (e-commerce, energy transition). Arrived to learn how a commerce business actually works — left with three things in production: an AI chatbot, a public-aid calculator, and a complete site rebuild.",
           stack: ["React", "Node.js", "JavaScript", "OpenAI API"],
           bullets: [
-            "Shipped: site rebuild, public-aid calculator (frontend + backend), and AI qualification chatbot — all live on umod.fr.",
-            "Stack: React, Node.js, JavaScript, OpenAI API. Public repos, public deployment.",
-            "For you: one engagement proving the ability to ship frontend, backend, and AI together in production — not a school project.",
+            "Self-initiated: proposed and built an OpenAI chatbot in 3 days — lead qualification, automatic appointment booking, Q&A on services. Shipped to production on umod.fr.",
+            "Then a public-aid calculator (frontend + backend), then the full site rebuild — one month, my first complete marketing site. WordPress hosting constraint solved with an iframe wrapper pointing to a Netlify build, to ship without breaking their existing infra.",
+            "What I'd do differently today: direct Vercel deployment with DNS in the client's name, less scattered project structure. What stands: three tools in production at a real e-commerce, built from a blank page.",
           ],
           links: [
             { label: "Site", href: "https://umod.fr" },
